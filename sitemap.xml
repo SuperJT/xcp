@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/home.html</loc>
+      
+      <lastmod>2021-09-16T09:18:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/</loc>
+      
+      <lastmod>2021-08-31T08:41:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/releasenotes.html</loc>
+      
+      <lastmod>2021-11-10T10:27:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp//search.html</loc>
+      
+      <lastmod>2022-01-31T13:20:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-access-file-analytics.html</loc>
+      
+      <lastmod>2021-12-10T12:27:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-add-file-servers.html</loc>
+      
+      <lastmod>2021-12-10T12:27:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-configure-hdfs-connector-nfs.html</loc>
+      
+      <lastmod>2021-11-16T10:20:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-configure-multinode-scaleout-nfs.html</loc>
+      
+      <lastmod>2021-11-19T13:24:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-configure-posix-connector-nfs.html</loc>
+      
+      <lastmod>2021-11-16T10:20:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-configure-the-ini-file-for-xcp-nfs.html</loc>
+      
+      <lastmod>2021-11-08T13:11:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-configure-xcp.html</loc>
+      
+      <lastmod>2021-11-08T15:35:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-create-the-json-configuration-file.html</loc>
+      
+      <lastmod>2020-12-15T20:48:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-environment-variable.html</loc>
+      
+      <lastmod>2021-11-16T10:20:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-filters.html</loc>
+      
+      <lastmod>2021-07-20T10:25:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/get-more-information.html</loc>
+      
+      <lastmod>2020-12-15T20:48:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-install-file-analytics-for-nfs.html</loc>
+      
+      <lastmod>2021-06-29T14:24:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-install-file-analytics-for-smb.html</loc>
+      
+      <lastmod>2021-12-10T12:27:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-install-xcp-nfs.html</loc>
+      
+      <lastmod>2021-11-08T13:11:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-install-xcp-smb.html</loc>
+      
+      <lastmod>2021-12-20T14:47:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-install-xcp.html</loc>
+      
+      <lastmod>2021-07-20T10:56:55+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-logging-for-nfs-and-smb.html</loc>
+      
+      <lastmod>2021-11-16T10:20:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-migrate-data.html</loc>
+      
+      <lastmod>2020-10-27T18:02:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-migrate-nfs-data.html</loc>
+      
+      <lastmod>2021-11-09T12:59:44+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-migrate-smb-data.html</loc>
+      
+      <lastmod>2020-12-16T20:22:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-nfs-add-ons.html</loc>
+      
+      <lastmod>2021-11-16T10:20:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-performance-tuning.html</loc>
+      
+      <lastmod>2021-11-16T10:20:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-plan-data-migration.html</loc>
+      
+      <lastmod>2020-12-15T20:48:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-plan-nfs-data-migration.html</loc>
+      
+      <lastmod>2021-10-01T12:02:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-plan-smb-data-migration.html</loc>
+      
+      <lastmod>2020-12-16T20:22:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-using-file-analytics.html</loc>
+      
+      <lastmod>2020-12-16T20:22:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-ports-used.html</loc>
+      
+      <lastmod>2021-11-09T16:23:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-prepare-file-analytics.html</loc>
+      
+      <lastmod>2021-09-16T17:43:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-prepare-linux-for-xcp-nfs.html</loc>
+      
+      <lastmod>2021-11-16T10:20:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-prepare-windows-for-xcp-smb.html</loc>
+      
+      <lastmod>2021-12-10T12:27:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-run-a-scan.html</loc>
+      
+      <lastmod>2021-12-10T12:27:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-supported-configurations.html</loc>
+      
+      <lastmod>2021-11-08T15:35:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-troubleshoot-xcp-file-analytics-errors.html</loc>
+      
+      <lastmod>2021-11-10T10:27:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-troubleshoot-xcp-nfs.html</loc>
+      
+      <lastmod>2021-11-09T14:46:04+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-troubleshoot-xcp-smb-errors.html</loc>
+      
+      <lastmod>2021-11-22T09:05:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/xcp/xcp-unsupported-features.html</loc>
+      
+      <lastmod>2021-11-09T12:59:44+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
