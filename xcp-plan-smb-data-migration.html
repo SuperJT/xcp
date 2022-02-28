@@ -533,6 +533,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -682,6 +684,8 @@
         Migrate NFS data
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-smb-data.html">
         Migrate SMB data
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-nfs-additional-features.html">
+        Additional NFS features
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Troubleshoot</div>
       </a>
@@ -743,7 +747,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-21 07:47:44 +0000">02/21/2022</time>
+    <time datetime="2022-02-28 14:36:46 +0000">02/28/2022</time>
     
   
 
@@ -761,6 +765,14 @@
           alt="ciarm"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/68733805?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -800,8 +812,22 @@ Example:</p>
 <div class="sect2">
 <h3 id="scan">Scan</h3>
 <div class="paragraph">
-<p>The <code>scan</code> command recursively scans the entire SMB share and lists all the files at the end of the scan.<br>
-Example :</p>
+<p>The <code>scan</code> command recursively scans the entire SMB share and lists all the files at the end of the scan.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/xcp/images/note.svg" alt="Note">
+</td>
+<td class="content">
+During the scan operation, you can use the <code>-preserve-atime</code> flag with the <code>scan</code> command to preserve access time at the source .
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example :</strong></p>
 </div>
 <div class="ulist">
 <ul>

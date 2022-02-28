@@ -533,6 +533,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -682,6 +684,8 @@
         Migrate NFS data
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-smb-data.html">
         Migrate SMB data
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-nfs-additional-features.html">
+        Additional NFS features
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Troubleshoot</div>
       </a>
@@ -743,11 +747,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-21 07:47:44 +0000">02/21/2022</time>
+    <time datetime="2022-02-28 14:36:46 +0000">02/28/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" href="https://github.com/ciarm">
     <img  class="avatar avatar-small"
           alt="ciarm"
@@ -772,14 +784,6 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" href="https://github.com/netapp-aoife">
-    <img  class="avatar avatar-small"
-          alt="netapp-aoife"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/92876203?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" href="https://github.com/netapp-aherbin">
     <img  class="avatar avatar-small"
           alt="netapp-aherbin"
@@ -801,8 +805,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="configure-storage">Configure storage</h3>
+<div class="sect1">
+<h2 id="configure-storage">Configure storage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>XCP SMB transitions and migrations have the following user login requirements:</p>
 </div>
@@ -813,9 +818,6 @@
 </li>
 <li>
 <p>Add the migration or XCP host user to the audit and security log policy for Active Directory. To locate the 'Manage Auditing and Security Log' Policy on Windows 10, follow these steps:</p>
-</li>
-</ul>
-</div>
 <div class="olist arabic">
 <div class="title">Steps</div>
 <ol class="arabic">
@@ -830,14 +832,13 @@
 </li>
 <li>
 <p>To add an XCP host user, select <strong>Add User or Group</strong>.</p>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>For more information, see: <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953(v%3Dws.11)" target="_blank" rel="noopener">Manage auditing and security log</a>.</p>
 </div>
-<div class="ulist">
-<ul>
+</li>
+</ol>
+</div>
+</li>
 <li>
 <p>Target storage system: XCP host user must have read and write access.</p>
 </li>
@@ -870,6 +871,39 @@ Write permission is required in the source storage system for supporting the XCP
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configure-a-windows-client">Configure a Windows client</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Add the destination storage box and the source storage box to the host file:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the following location: <code>(C:\Windows\System32\drivers\etc\hosts)</code></p>
+</li>
+<li>
+<p>Insert the following host entries to the file in the following format:</p>
+<div class="paragraph">
+<p><code>&lt;Source data vserver data interface ip&gt;   &lt;Source cifs server name&gt;<br>
+&lt;Destination data vserver data interface ip&gt;   &lt;Destination cifs server name&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/xcp_image17.png" alt="sample hosts file"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 
