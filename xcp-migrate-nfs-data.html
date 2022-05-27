@@ -781,7 +781,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-09 12:59:44 +0000">11/09/2021</time>
+    <time datetime="2022-05-26 16:35:38 +0000">05/26/2022</time>
     
   
 
@@ -810,6 +810,14 @@
           style="border-radius: 50%;"/>
   </a>
   
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -822,8 +830,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="copy">Copy</h3>
+<div class="sect1">
+<h2 id="copy">Copy</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>copy</code> command scans and copies the entire source directory structure to a destination NFSv3 export. The <code>copy</code> command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are displayed at the end of the copy operation.</p>
 </div>
@@ -855,8 +864,10 @@
 <p>See <code>xcp help copy</code> for more details.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="resume">Resume</h3>
+</div>
+<div class="sect1">
+<h2 id="resume">Resume</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>resume</code> command restarts a previously interrupted copy operation by specifying the catalog index name or number. The catalog index name or number of the previous copy operation is stored on the <code>&lt;catalog path&gt;:/catalog/indexes</code> directory.</p>
 </div>
@@ -872,8 +883,10 @@
 <p>See <code>xcp help resume</code> for more details.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sync">Sync</h3>
+</div>
+<div class="sect1">
+<h2 id="sync">Sync</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>sync</code> command scans for changes and modifications performed on a source NFS directory using a catalog index tag name or the number of a previous copy operation. Source incremental changes are copied and applied to the target directory. The old catalog index numbers are replaced with a new one <span class="underline">after the sync operation</span>.</p>
 </div>
@@ -889,8 +902,10 @@
 <p>See <code>xcp help sync</code> for more details.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="verify">Verify</h3>
+</div>
+<div class="sect1">
+<h2 id="verify">Verify</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>verify</code> command uses a full byte-by-byte data comparison between source and target directories after the copy operation without using a catalog index number. The command checks for modification times and other file or directory attributes, including permissions. The command also reads the files on both sides and compares the data.</p>
 </div>
@@ -920,6 +935,7 @@
 </div>
 <div class="paragraph">
 <p>See <code>xcp help verify</code> for more details.</p>
+</div>
 </div>
 </div>
 

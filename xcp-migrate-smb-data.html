@@ -781,7 +781,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-26 15:03:54 +0000">01/26/2022</time>
+    <time datetime="2022-05-27 10:45:16 +0000">05/27/2022</time>
     
   
 
@@ -822,8 +822,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="copy">Copy</h3>
+<div class="sect1">
+<h2 id="copy">Copy</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>copy</code> command scans and copies the entire source directory structure to a destination SMB share. The <code>copy</code> command requires having source and destination paths as variables. The scanned and copied files, throughput/speed, and elapsed time details are printed to the console once every five seconds.</p>
 </div>
@@ -851,8 +852,10 @@ During the copy operation, you can use the <code>-preserve-atime</code> flag wit
 <p>See <code>xcp help copy</code> for more details.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sync">Sync</h3>
+</div>
+<div class="sect1">
+<h2 id="sync">Sync</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>sync</code> command scans for changes and modifications in the source and target shares in parallel, and applies the appropriate actions (remove, modify, rename, and so on) to the target to make sure that the target is identical to the source.</p>
 </div>
@@ -883,8 +886,10 @@ During the sync operation,  you can use the <code>-preserve-atime</code> flag wi
 <p>See <code>xcp help sync</code> for more details.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="verify">Verify</h3>
+</div>
+<div class="sect1">
+<h2 id="verify">Verify</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>verify</code> command reads both source and target shares and compares them, providing information about what is different. You can use the command on any source and destination, regardless of the tool used to perform the copy or sync.</p>
 </div>
@@ -919,6 +924,7 @@ During the sync operation,  you can use the <code>-preserve-atime</code> flag wi
 </div>
 <div class="paragraph">
 <p>See <code>xcp help verify</code> for more details.</p>
+</div>
 </div>
 </div>
 
