@@ -781,11 +781,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-25 16:01:01 +0000">05/25/2022</time>
+    <time datetime="2022-06-02 09:44:02 +0000">06/02/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-pcarriga">
     <img  class="avatar avatar-small"
           alt="netapp-pcarriga"
@@ -807,14 +815,6 @@
           alt="ciarm"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/68733805?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
-    <img  class="avatar avatar-small"
-          alt="netapp-aoife"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -868,7 +868,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Custom location requires the <code>XCP_CONFIG_DIR</code> environment variable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error! Reference source not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use the location you have set against the <code>XCP_CONFIG_DIR</code> variable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
 </tr>
 </tbody>
@@ -1031,7 +1031,10 @@ With the <code>sanitize</code> option as <code>true</code>:<br>
 <p>For any features that you want to enable, change the <code>isEnabled</code> value to <code>true</code>.</p>
 </li>
 <li>
-<p>Name the file <code>xcpLogConfig.json</code> and save it to the file location mentioned in <strong>Error! Reference source not found.</strong></p>
+<p>Name the file <code>xcpLogConfig.json</code> and save it to the default location: /opt/NetApp/xFiles/xcp/</p>
+<div class="paragraph">
+<p>If the <code>XCP_CONFIG_DIR</code> environment variable is set, save the <code>xcpLogConfig.json</code> file in the same location that is set against the <code>XCP_CONFIG_DIR</code> variable.</p>
+</div>
 </li>
 </ol>
 </div>
