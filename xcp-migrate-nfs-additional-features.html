@@ -753,7 +753,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-24 18:27:09 +0000">02/24/2022</time>
+    <time datetime="2022-07-22 08:59:01 +0000">07/22/2022</time>
     
   
 
@@ -774,19 +774,32 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>XCP includes some additional NFS features that make it easy to change the ownership and permissions of files and directories for any NFS share or POSIX path. You can use the XCP <code>chown</code> and <code>chmod</code> commands to recursively change all of the files and directories for a given NFS share or POSIX path. This increases the performance of millions of files.</p>
-</div>
-<div class="paragraph">
-<div class="title">About this task</div>
-<p>Before changing the ownership of the files, you must configure the new owner. Otherwise, the command will fail. The XCP <code>chown</code> and <code>chmod</code> commands work similar to the Linux <code>chown</code> and <code>chmod</code> commands.</p>
+<p>XCP includes some additional NFS features.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="chmod">Chmod</h2>
+<h2 id="chown-and-chmod">Chown and Chmod</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>chmod</code> command scans and changes the file permission of all files in the chosen directory structure. The <code>chmod</code> command requires a mode or reference and NFS share or POSIX path as variables. XCP <code>chmod</code> recursively changes the permissions for a given path. You can use the <code>chmod</code> command to display the total files scanned and the permissions that have been changed in the output.</p>
+<p>You can use the XCP <code>chown</code> and <code>chmod</code> commands to recursively change all of the files and directories for a given NFS share or POSIX path. This increases the performance of millions of files.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/xcp/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Before changing the ownership of the files, you must configure the new owner. Otherwise, the command will fail. The XCP <code>chown</code> and <code>chmod</code> commands work similar to the Linux <code>chown</code> and <code>chmod</code> commands.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="chmod">Chmod</h3>
+<div class="paragraph">
+<p>The <code>chmod</code> command scans and changes the file permission of all files in the chosen directory structure. The <code>chmod</code> command requires a mode or reference and an NFS share or POSIX path as variables. XCP <code>chmod</code> recursively changes the permissions for a given path. You can use the <code>chmod</code> command to display the total files scanned and the permissions that have been changed in the output.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example:</strong></p>
@@ -804,12 +817,13 @@ xcp chmod -exclude “fnm(‘file.txt’)” -mode 111 file:///demo/user1/</pre>
 <p>Run the <code>xcp help chmod</code> command for more information.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="chown">Chown</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="chown">Chown</h3>
 <div class="paragraph">
-<p>The <code>chown</code> command scans and changes the ownership of all files in the chosen directory structure. The <code>chown</code> command requires a NFS share or POSIX path as variables. XCP <code>chown</code> recursively change the ownership for a given path.</p>
+<p>You can use the XCP <code>chown</code> command to recursively change all of the files and directories for a given NFS share or POSIX path. This increases the performance of millions of files.</p>
+</div>
+<div class="paragraph">
+<p>The <code>chown</code> command scans and changes the ownership of all files in the chosen directory structure. The <code>chown</code> command requires an NFS share or POSIX path as variables. XCP <code>chown</code> recursively changes the ownership for a given path.</p>
 </div>
 <div class="paragraph">
 <p><strong>Example</strong></p>
@@ -828,6 +842,7 @@ xcp chown -group-from group1 -group group2 nfs_server01.netapp.com:/export1/</pr
 </div>
 <div class="paragraph">
 <p>Run the <code>xcp help chown</code> command for more information.</p>
+</div>
 </div>
 </div>
 </div>

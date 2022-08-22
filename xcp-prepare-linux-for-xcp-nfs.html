@@ -753,7 +753,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-24 18:27:09 +0000">02/24/2022</time>
+    <time datetime="2022-06-29 11:45:10 +0000">06/29/2022</time>
     
   
 
@@ -885,7 +885,10 @@ You must store XCP catalogs separately. They must not be located on either the s
 <p>To prevent administrators accidentally modifying the source volume, you should configure the source volume for the NFSv3 and NFSv4 export directories as read-only.</p>
 </li>
 <li>
-<p>In ONTAP, you can use the diagnostic <code>-atime-update</code> option to preserve atime. This feature is only available in ONTAP and is helpful if you want to preserve atime in source objects while running XCP.</p>
+<p>In ONTAP, you can use the diagnostic <code>-atime-update</code> option to preserve atime on source objects. This feature is only available in ONTAP and is helpful if you want to preserve atime in source objects while running XCP.</p>
+</li>
+<li>
+<p>In XCP, you can use the <code>-preserve-atime</code> option to preserve atime on source objects. This option is available to use with all commands that access source objects.</p>
 </li>
 </ul>
 </div>

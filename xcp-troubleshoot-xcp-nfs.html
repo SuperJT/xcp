@@ -753,7 +753,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-09 14:46:04 +0000">11/09/2021</time>
+    <time datetime="2022-08-11 10:10:22 +0000">08/11/2022</time>
     
   
 
@@ -763,6 +763,14 @@
           alt="netapp-pcarriga"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/77334475?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -787,9 +795,16 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>Review the solutions to troubleshoot your issue.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="xcp-issues-and-solutions">XCP issues and solutions</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -802,6 +817,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xcp: ERROR</code>:  Incompatible index file. Please use index file generated with current version of XCP only. Alternatively you could download older XCP binary from xcp.netapp.com.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You are trying to perform operations on an index that was generated using an XCP version older than XCP 1.9. This is not supported. It is recommended to complete any in-progress migrations and then switch to this version of XCP. Alternatively, you can re-run the <code>scan</code>, <code>copy</code> or <code>verify</code> commands to generate a new index with XCP 1.9.</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>xcp: ERROR</code>: must run as root</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Execute XCP commands as root user</p></td>
@@ -926,6 +945,37 @@ Any change in the file leads to a complete copy of the file. As a result, perfor
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logdump">Logdump</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you encounter an issue with an XCP command or job, the <code>logdump</code> command enables you to dump log files related to the issue into a <code>.zip</code> file that can be sent to NetApp for debugging. The <code>logdump</code> command filters logs based on the migration ID or job ID and dumps those logs into a <code>.zip</code> file in the current directory. The <code>.zip</code> file has the same name as the migration or job ID that is used with the command.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>xcp logdump -j &lt;job id&gt;
+xcp logdump -m &lt;migration id&gt;</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/xcp/images/note.svg" alt="Note">
+</td>
+<td class="content">
+After migration, if you use the <code>XCP_CONFIG_DIR</code> or <code>XCP_LOG_DIR</code> environment variables to override the default config location or log location, the <code>logdump</code> command fails when used with an old migration or job ID. To avoid this, use the same logpath until migration completes.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->

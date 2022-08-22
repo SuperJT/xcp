@@ -753,11 +753,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-16 10:20:57 +0000">11/16/2021</time>
+    <time datetime="2022-06-08 15:02:39 +0000">06/08/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-pcarriga">
     <img  class="avatar avatar-small"
           alt="netapp-pcarriga"
@@ -803,7 +811,7 @@ A non-root user can also use the following variables.
 </table>
 </div>
 <div class="paragraph">
-<p>The environment variable XCP_CONFIG_DIR overrides the default location, <code>/opt/NetApp/xFiles/xcp</code>. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom configuration directory is set, the log file is named <code>xcp.hostname.log</code> instead of the default, <code>xcp.log</code>.</p>
+<p>The environment variable <code>XCP_CONFIG_DIR</code> overrides the default location, <code>/opt/NetApp/xFiles/xcp</code>. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When the <code>XCP_CONFIG_DIR</code> variable is set, a new directory with the same name as the host name is created inside the custom configuration directory path, new logs are stored at this location.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -811,7 +819,7 @@ A non-root user can also use the following variables.
 </div>
 </div>
 <div class="paragraph">
-<p>The environment variable XCP_LOG_DIR overrides the default location that stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When a custom log directory is set, the log file is named <code>xcp.hostname.log</code> instead of the default, <code>xcp.log</code>.</p>
+<p>The environment variable <code>XCP_LOG_DIR</code> overrides the default location that stores the XCP log in the configuration directory. If set, the value should be an OS filesystem path, possibly to a mounted NFS directory. When the  <code>XCP_LOG_DIR</code> variable is set, a new directory with the same name as the host name is created inside the custom log directory path, new logs are stored at this location.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -819,7 +827,7 @@ A non-root user can also use the following variables.
 </div>
 </div>
 <div class="paragraph">
-<p>The environment variable XCP_CATALOG_PATH overrides the setting in xcp.ini. If set, the value should be in the xcp path format, <code>server:export[:subdirectory]</code>.</p>
+<p>The environment variable <code>XCP_CATALOG_PATH</code> overrides the setting in xcp.ini. If set, the value should be in the xcp path format, <code>server:export[:subdirectory]</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">

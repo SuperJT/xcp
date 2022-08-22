@@ -753,7 +753,7 @@
 <p class="page-details">
   
     
-    <time datetime="2021-11-22 09:05:20 +0000">11/22/2021</time>
+    <time datetime="2022-07-19 10:56:28 +0000">07/19/2022</time>
     
   
 
@@ -771,6 +771,14 @@
           alt="netapp-barbe"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/55463742?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
+    <img  class="avatar avatar-small"
+          alt="netapp-aoife"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/92876203?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -859,9 +867,9 @@ Rerun the command with the correct syntax for fallback user/group options</p></t
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>xcp copy</code> with acl migration<br>
 <br>
-Erorr message logged in xcp.log file:<br>
+Error message logged in xcp.log file:<br>
 <code>pywintypes.error</code>: <code>(1314, 'GetNamedSecurityInfo', 'A required privilege is not held by the client.')</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A user is facing an issue related to security descriptors because with the privileges that the migrations user owns, XCP can only get owner, group, and DACL, but, it cannot get SACL.<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A user is facing an issue related to security descriptors because with the privileges that the migrations user owns, XCP can only get owner, group, and DACL, it cannot get SACL.<br>
 Add your migration user to "Manage Audit and Security Log” policy in your Active Directory.<br>
 Reference: <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn221953%28v%3Dws.11%29" target="_blank" rel="noopener">Manage auditing and security log</a></p></td>
 </tr>
