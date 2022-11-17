@@ -25,39 +25,42 @@
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
-  <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/us-en/xcp/css/font-awesome.min.css">
-
-  <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/us-en/xcp/css/boxshadowproperties.css">
-
-  <!-- NetApp CSS controls the technical content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/xcp/css/netapp.css">
-
-  <!-- WWW CSS Content -->
-  <link rel="stylesheet" type="text/css" href="/us-en/xcp/css/www-luci-dotcom.min.css">
-  <link rel="stylesheet" type="text/css" href="/us-en/xcp/css/www-netapp-dotcom.css">
-  <link rel="stylesheet" href="/us-en/xcp/css/www-netapp-library-critical.min.css" media="all" >
-  <link rel="stylesheet" href="/us-en/xcp/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/us-en/xcp/css/www-netapp-library-global-header-footer.min.css">
-
-  <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/us-en/xcp/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/us-en/xcp/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/xcp/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/xcp/css/custom-dropdown.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/xcp/css/na-pagenav.css' type='text/css'>
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/us-en/xcp/css/netappdocs.css">
 
   
   <link rel="stylesheet" href="/us-en/xcp/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/us-en/xcp/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
   <link rel='stylesheet' href='/us-en/xcp/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
-    if (document.location.hostname === "docs.netapp.com") {
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
       var head = document.getElementsByTagName('head')[0];
       var onetrustConsent = document.createElement("script");
       onetrustConsent.type = "text/javascript";
-      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
       head.appendChild(onetrustConsent);
 
       var onetrustScript = document.createElement("script");
@@ -65,40 +68,17 @@
       onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
       onetrustScript.charset = "UTF-8";
       onetrustScript.dataset.documentLanguage = "true";
-      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      onetrustScript.dataset.domainScript = consentId;
       head.appendChild(onetrustScript);
-    }
-
-    function OptanonWrapper() { }
-
-    if (document.location.hostname === "docs.netapp.com") {
-      var adobe = document.createElement("script");
-      adobe.type = "text/plain";
-      adobe.className = "optanon-category-C0002";
-      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
-      head.appendChild(adobe);
-
-      var google = document.createElement("script");
-      google.type = "text/plain";
-      google.className = "optanon-category-C0002";
-      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
-      head.appendChild(google);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-81697994-3');
-    }
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/xcp/js/na-search.js'></script><script src='/us-en/xcp/js/na-pagenav.js'></script><link rel='stylesheet' href='/us-en/xcp/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/us-en/xcp/css/prism-netapp.css' type='text/css'>
-
-
-  <script src='/us-en/xcp/js/na-utility.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/us-en/xcp/js/na-search.js'></script><script src='/us-en/xcp/js/na-pagenav.js'></script><script src='/us-en/xcp/js/na-utility.js'></script>
   <script src='/us-en/xcp/js/clouddocs.js'></script>
   <script src='/us-en/xcp/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -139,6 +119,17 @@
               $("#mysidebar").navgoco('toggle', true);
           });
 
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/us-en/xcp"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
       });
 
   </script>
@@ -169,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/xcp/issues/new?body=Page%3A%20[Migrate NFS data](https://docs.netapp.com/us-en/xcp/xcp-migrate-nfs-data.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/xcp/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/xcp/blob/main/xcp-migrate-nfs-data.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/xcp/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/xcp/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/xcp/issues/new?body=Page%3A%20[Migrate NFS data](https://docs.netapp.com/us-en/xcp/xcp-migrate-nfs-data.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/us-en/xcp/images/discuss-sm.svg" alt="" class="github-icon" />Request doc changes</a><a target="_blank" href="https://github.com/NetAppDocs/xcp/blob/main/xcp-migrate-nfs-data.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/xcp/images/edit-sm.svg" alt="" class="github-icon" />Edit this page</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/xcp/images/article-sm.svg" alt="" class="github-icon" />Learn how to contribute</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">ON THIS PAGE</div>
@@ -253,6 +244,8 @@
       </div>
 
       
+      
+      
       <div class="search-property-bar">
         <div id="search-demo-container" class="searchbox n-property-bar__search">
           <div id="react-search" 
@@ -299,6 +292,10 @@
           <a href="https://docs.netapp.com/zh-tw/xcp/xcp-migrate-nfs-data.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/ko-kr/xcp/xcp-migrate-nfs-data.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/xcp/xcp-migrate-nfs-data.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/xcp/xcp-migrate-nfs-data.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -341,6 +338,7 @@
   <!-- Sidebar Column -->
   
   <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/us-en/xcp/images/collapse.png" alt="Collapse navigation panel"></button>
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/us-en/xcp/images/pdf.png" alt="" width="16" height="16"/>Available PDFs<span>
@@ -619,92 +617,299 @@
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
 </script><div class="sidebar-nav-container" id="mysidebardiv">
-  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/home.html">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Home"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/home.html">
         Home
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/releasenotes.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Release Notes"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/releasenotes.html">
         Release Notes
-      </a></li><li class="subfolders "><a href="/us-en/xcp/index.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get started with XCP"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/us-en/xcp/index.html">
         <div class="na-navbar-padding"> Get started with XCP</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-nfs-add-ons.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="XCP NFS add-on features"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-nfs-add-ons.html">
         XCP NFS add-on features
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-unsupported-features.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Unsupported features"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-unsupported-features.html">
         Unsupported features
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-supported-configurations.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supported configurations"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-supported-configurations.html">
         Supported configurations
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-ports-used.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ports used by XCP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-ports-used.html">
         Ports used by XCP
-      </a></li></ul></li><li class="subfolders "><a href="/us-en/xcp/xcp-install-xcp.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install XCP"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/us-en/xcp/xcp-install-xcp.html">
         <div class="na-navbar-padding"> Install XCP</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-prepare-linux-for-xcp-nfs.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare Linux for XCP NFS"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-prepare-linux-for-xcp-nfs.html">
         Prepare Linux for XCP NFS
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-prepare-windows-for-xcp-smb.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare Windows for XCP SMB"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-prepare-windows-for-xcp-smb.html">
         Prepare Windows for XCP SMB
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-prepare-file-analytics.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Prepare File Analytics"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-prepare-file-analytics.html">
         Prepare File Analytics
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-xcp-nfs.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install XCP NFS"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-xcp-nfs.html">
         Install XCP NFS
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-xcp-smb.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install XCP SMB"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-xcp-smb.html">
         Install XCP SMB
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-file-analytics-for-nfs.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install File Analytics for NFS"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-file-analytics-for-nfs.html">
         Install File Analytics for NFS
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-file-analytics-for-smb.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Install File Analytics for SMB"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-install-file-analytics-for-smb.html">
         Install File Analytics for SMB
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure XCP"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Configure XCP</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-the-ini-file-for-xcp-nfs.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure the INI file for XCP NFS"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-the-ini-file-for-xcp-nfs.html">
         Configure the INI file for XCP NFS
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-performance-tuning.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Performance tuning"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-performance-tuning.html">
         Performance tuning
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-environment-variable.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Environment variable"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-environment-variable.html">
         Environment variable
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-posix-connector-nfs.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure the POSIX connector"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-posix-connector-nfs.html">
         Configure the POSIX connector
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-hdfs-connector-nfs.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure the HDFS connector"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-hdfs-connector-nfs.html">
         Configure the HDFS connector
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-multinode-scaleout-nfs.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configure multinode scale-out"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-configure-multinode-scaleout-nfs.html">
         Configure multinode scale-out
-      </a></li></ul></li><li class="subfolders "><a href="/us-en/xcp/xcp-plan-data-migration.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan data migration"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/us-en/xcp/xcp-plan-data-migration.html">
         <div class="na-navbar-padding"> Plan data migration</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-plan-nfs-data-migration.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan NFS data migration"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-plan-nfs-data-migration.html">
         Plan NFS data migration
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-plan-smb-data-migration.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan SMB data migration"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-plan-smb-data-migration.html">
         Plan SMB data migration
-      </a></li><li class="subfolders "><a href="/us-en/xcp/xcp-using-file-analytics.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Plan using File Analytics"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/us-en/xcp/xcp-using-file-analytics.html">
         <div class="na-navbar-padding"> Plan using File Analytics</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-access-file-analytics.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Access File Analytics"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-access-file-analytics.html">
         Access File Analytics
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-add-file-servers.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Add file servers"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-add-file-servers.html">
         Add file servers
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-run-a-scan.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Run a scan"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-run-a-scan.html">
         Run a scan
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-filters.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Filters"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-filters.html">
         Filters
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-logging-for-nfs-and-smb.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Logging for NFS and SMB (optional)"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-logging-for-nfs-and-smb.html">
         Logging for NFS and SMB (optional)
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Migrate data"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Migrate data</div>
       </a>
-      <ul><li class="  active "><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-nfs-data.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Migrate NFS data"
+      data-li-level="2#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-nfs-data.html">
         Migrate NFS data
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-smb-data.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Migrate SMB data"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-smb-data.html">
         Migrate SMB data
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-nfs-additional-features.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Additional NFS features"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-migrate-nfs-additional-features.html">
         Additional NFS features
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Troubleshoot"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
         <div class="na-navbar-padding"> Troubleshoot</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-troubleshoot-xcp-nfs.html">
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Troubleshoot XCP NFS errors"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-troubleshoot-xcp-nfs.html">
         Troubleshoot XCP NFS errors
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-troubleshoot-xcp-smb-errors.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Troubleshoot XCP SMB Errors"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-troubleshoot-xcp-smb-errors.html">
         Troubleshoot XCP SMB Errors
-      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/xcp-troubleshoot-xcp-file-analytics-errors.html">
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Troubleshoot XCP File Analytics errors"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/xcp-troubleshoot-xcp-file-analytics-errors.html">
         Troubleshoot XCP File Analytics errors
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/xcp/get-more-information.html">
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Get more information"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/xcp/get-more-information.html">
         Get more information
       </a></li></ul>
 </div>
@@ -717,14 +922,16 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container --><article class="page-content">
+    <!-- Begin of page container --><article class="page-content" id="main">
       <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/us-en/xcp/images/expand.png" alt="Expand navigation panel"></button>
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
@@ -947,11 +1154,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <span class="n-footer__fine-print">Have feedback for our website?</span>
-              <a target="_self" href="javascript:netapp_mailto()">Let us know</a>
-            </li>
-            <li class="n-footer__copyright-link">
-              <a href="https://docs.netapp.com/us-en/announcements/">Announcements</a>
+              <a target="_self" href="javascript:netapp_mailto()">Send feedback about this page</a>
             </li>
           </ul>
         </div>
