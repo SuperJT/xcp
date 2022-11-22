@@ -960,24 +960,24 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-10 12:27:11 +0000">12/10/2021</time>
+    <time datetime="2022-11-09 11:07:40 +0000">11/09/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/ciarm">
-    <img  class="avatar avatar-small"
-          alt="ciarm"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/68733805?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-aoife">
     <img  class="avatar avatar-small"
           alt="netapp-aoife"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/92876203?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/ciarm">
+    <img  class="avatar avatar-small"
+          alt="ciarm"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/68733805?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1010,6 +1010,8 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>File Analytics provides a graphical view of scan results.</p>
 </div>
@@ -1047,18 +1049,134 @@ When prompted, accept the security certificate:</p>
 </div>
 </li>
 <li>
-<p>Log in to the GUI using the username “admin” and the password you set during configuration</p>
+<p>Log in to the File Analytics GUI.</p>
+<div class="paragraph">
+<p>There are two ways to log in to the File Analytics GUI:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the username “admin” and the password you set during configuration.</p>
 <div class="paragraph">
 <p><span class="image"><img src="./media/xcp_image2.png" alt="XCP File Analytics sign in screen"></span></p>
 </div>
 </li>
 <li>
-<p>On login, you can see that the NFS agent is added: a green tick is present showing minimal system configuration of the Linux system and XCP version.</p>
+<p>Configure and enable enterprise-wide single sign-on (SSO) capability.</p>
+<div class="paragraph">
+<p>You can use this login capability to set up XCP File Analytics on a particular machine and share the web UI URL enterprise-wide, allowing users to log in to the UI using their SSO credentials.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/xcp/images/note.svg" alt="Note">
+</td>
+<td class="content">
+SSO login is optional and can be configured and enabled permanently.<br>
+To set up Security Assertion Markup Language (SAML) based SSO login, see <a href="#configure-sso-credentials">Configure SSO credentials</a>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>After logging in, you can see that the NFS agent; a green tick is present showing minimal system configuration of the Linux system and XCP version.</p>
 </li>
 <li>
 <p>If you have configured an SMB agent, you can see the SMB agent added in the same agent card.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configure-sso-credentials">Configure SSO credentials</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The SSO login functionality is implemented in XCP File Analytics using SAML and is supported with the Active Directory Federation Services (ADFS) identity provider. SAML offloads the authentication task to the third-party identity provider (IdP) for your enterprise which can utilize any number of approaches for MFA (multifactor authentication).</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Register the XCP File Analytics application with your enterprise identity provider.</p>
+<div class="paragraph">
+<p>File Analytics now runs as a service provider and therefore must be registered with your enterprise identity provider. Generally, there is a team in the enterprise that handles this SSO integration process. The first step is to find and reach out to the relevant team and share the File Analytics application metadata details with them.</p>
+</div>
+<div class="paragraph">
+<p>The following are the mandatory details that you must share to register with your identity provider:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Service provider entity ID:</strong> <code>https://&lt;IP address of linux machine&gt;/xcp</code></p>
+</li>
+<li>
+<p><strong>Service provider Assertion Consumer Service (ACS) URL:</strong> <code>https://&lt;IP address of linux machine&gt;:5030/api/xcp/SAML/sp</code></p>
+<div class="paragraph">
+<p>You can also verify these details by logging in to the File Analytics UI:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Log in to the UI using the username “admin” and password set up during installation.</p>
+</li>
+<li>
+<p>Select the <strong>User</strong> icon on the top right corner of the page, then select <strong>SAML settings</strong>.</p>
+<div class="paragraph">
+<p>Check <strong>Service provider settings</strong> in the drop down menu that appears.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/xcp_image18.png" alt="SAML settings example"></span></p>
+</div>
+<div class="paragraph">
+<p>After registration, you receive the IdP endpoint details for your enterprise. You are required to provide this IdP endpoint metadata to the File Analytics UI.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Provide the IdP details:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to <strong>Dashboard</strong>. Select the <strong>User</strong> icon at the top right corner of the page and select <strong>SAML settings</strong>.</p>
+</li>
+<li>
+<p>Input the IdP details that you obtained after registration.</p>
+<div class="paragraph">
+<p><strong>Example</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/xcp_image19.png" alt="Idp setting example"></span></p>
+</div>
+</li>
+<li>
+<p>Select the <strong>Enable SAML</strong> checkbox to permanently enable SAML-based SSO.</p>
+</li>
+<li>
+<p>Select <strong>Save</strong>.</p>
+</li>
+<li>
+<p>Log out of File Analytics and log back in again.</p>
+<div class="paragraph">
+<p>You are redirected to your enterprise SSO page.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 
     </article>
